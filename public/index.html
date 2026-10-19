@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PixHost – Free image hosting</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg"></canvas>
+<canvas id="fx"></canvas>
+
+<header class="glass nav fx">
+  <a class="brand" href="#upload">▣ PixHost</a>
+  <nav>
+    <button class="btn fx" data-go="upload" data-i="nav_upload"></button>
+    <button class="btn fx" data-go="recent" data-i="nav_recent"></button>
+    <button class="btn fx" data-go="about" data-i="nav_about"></button>
+    <button class="btn fx icon" id="theme" aria-label="Dark mode">🌙</button>
+    <select class="btn fx" id="lang" aria-label="Language">
+      <option value="en">English</option><option value="ur">اردو</option>
+      <option value="hi">हिन्दी</option><option value="es">Español</option>
+    </select>
+  </nav>
+</header>
+
+<main>
+  <section id="upload">
+    <h1 data-i="h1"></h1>
+    <p class="sub" data-i="sub"></p>
+    <label id="drop" class="glass drop fx" tabindex="0">
+      <input id="file" type="file" accept="image/png,image/jpeg,image/gif,image/webp" multiple hidden>
+      <span class="big">⬆</span><b data-i="drop"></b><small data-i="hint"></small>
+    </label>
+    <div id="results"></div>
+  </section>
+
+  <section id="recent">
+    <h2 data-i="nav_recent"></h2>
+    <p id="empty" class="sub" data-i="empty"></p>
+    <div id="grid" class="grid"></div>
+  </section>
+
+  <section id="about" class="glass card">
+    <h2 data-i="nav_about"></h2>
+    <p data-i="about"></p>
+  </section>
+</main>
+
+<footer class="glass foot fx">
+  <span id="copy"></span>
+  <div>
+    <a class="btn fx" href="#upload" data-i="nav_upload"></a>
+    <a class="btn fx" href="#recent" data-i="nav_recent"></a>
+    <a class="btn fx" href="#about" data-i="nav_about"></a>
+    <button class="btn fx" id="top" data-i="top"></button>
+  </div>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
